@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Neumorphism Dark Theme */
+:root {
+  --bg: #0e131a;           /* dark surface */
+  --fg: #e6edf3;           /* light text */
+  --shadow-dark: #070b10;  /* inner shadow */
+  --shadow-light: #16202b; /* outer light-ish */
+  --accent: #9ecbff;       /* link/accent */
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Tailwind utility overrides for dark readability */
+.text-gray-500 { color: #98a6b6 !important; }
+.text-gray-600 { color: #aeb7c4 !important; }
+.text-gray-700 { color: #c3cdda !important; }
+.bg-gray-50    { background-color: #151c25 !important; }
+
+.neo-surface { background: var(--bg); }
+
+.neo-card {
+  background: var(--bg);
+  border-radius: 16px;
+  box-shadow: 9px 9px 16px var(--shadow-dark), -9px -9px 16px var(--shadow-light);
+  padding: 16px;
+}
+
+.neo-card:hover {
+  box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+}
+
+.neo-chip {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  background: var(--bg);
+  box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+  font-size: 12px;
+  color: var(--fg);
+}
+
+.neo-chip-ok { color: #5ee8a0; }
+
+.neo-link {
+  color: var(--accent);
+  text-decoration: none;
+  background: var(--bg);
+  padding: 8px 12px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+}
+.neo-link:hover {
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+}
+
+.neo-code {
+  background: var(--bg);
+  padding: 2px 6px;
+  border-radius: 8px;
+  box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+  color: var(--fg);
+}
+
+/* Form elements */
+input, select, textarea {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

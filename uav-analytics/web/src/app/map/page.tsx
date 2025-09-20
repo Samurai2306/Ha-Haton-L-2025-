@@ -68,7 +68,7 @@ export default function MapPage() {
   return (
     <main className="max-w-6xl mx-auto p-6 neo-surface">
       <div className="flex items-center justify-between mb-4">
-        <h1 className="text-2xl font-bold">Map</h1>
+        <h1 className="text-2xl font-bold">Карта</h1>
         <div className="flex gap-2 items-center">
           <label className="text-sm text-gray-600">Регион:</label>
           <select

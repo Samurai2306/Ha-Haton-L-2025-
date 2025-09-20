@@ -8,3 +8,4 @@ python-dotenv==1.0.1
 orjson==3.10.7
 # Optional: statsmodels for Holt-Winters
 statsmodels==0.14.4
+requests==2.32.3

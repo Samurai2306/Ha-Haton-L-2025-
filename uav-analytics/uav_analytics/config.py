@@ -27,3 +27,9 @@ if _cors == "*" or not _cors:
 else:
     CORS_ORIGINS = [x.strip() for x in _cors.split(",") if x.strip()]
 
+# AI (optional)
+AI_API_BASE = get_env("AI_API_BASE") or get_env("DEEPSEEK_API_BASE") or get_env("OPENAI_BASE_URL")
+AI_API_KEY = get_env("AI_API_KEY") or get_env("DEEPSEEK_API_KEY") or get_env("OPENAI_API_KEY")
+AI_MODEL = get_env("AI_MODEL") or get_env("DEEPSEEK_MODEL") or "deepseek-chat"
+AI_PROVIDER = get_env("AI_PROVIDER", "openai-compatible")
+AI_TIMEOUT = int(get_env("AI_TIMEOUT", "20"))
